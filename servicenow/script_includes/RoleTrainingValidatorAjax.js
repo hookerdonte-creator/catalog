@@ -62,11 +62,19 @@ RoleTrainingValidatorAjax.prototype = Object.extendsObject(AbstractAjaxProcessor
         }
 
         var completed = this._getCompletedTrainings(userSysId);
-        var completedNormalized = completed.map(this._normalize);
+        var missing;
 
-        var missing = allRequired.filter(function(training) {
-            return completedNormalized.indexOf(this._normalize(training)) === -1;
-        }, this);
+        if (completed.length === 0) {
+            // No completed-training records at all for this user means none
+            // of the required trainings can be considered done, regardless
+            // of how the training names would otherwise line up.
+            missing = allRequired.slice();
+        } else {
+            var completedNormalized = completed.map(this._normalize);
+            missing = allRequired.filter(function(training) {
+                return completedNormalized.indexOf(this._normalize(training)) === -1;
+            }, this);
+        }
 
         var result = {
             requiredByRole: requiredByRole,
