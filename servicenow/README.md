@@ -23,11 +23,19 @@ item be submitted.
 | File | ServiceNow artifact type | Notes |
 |---|---|---|
 | `script_includes/RoleTrainingValidatorAjax.js` | Script Include (Client callable = true) | Server-side lookups against both tables |
-| `ui_scripts/RoleTrainingValidation.js` | UI Script (Global = true, Client callable = false) | Shared client logic used by all catalog client scripts below |
 | `catalog_client_scripts/onload_business_role_training.js` | Catalog Client Script, type `onLoad` | Initializes state when the form loads (e.g. reopening a draft) |
 | `catalog_client_scripts/onchange_business_roles_mrvs.js` | Catalog Client Script, type `onChange`, variable = MRVS variable | Recomputes on every row add/edit/remove |
 | `catalog_client_scripts/onchange_requested_for.js` | Catalog Client Script, type `onChange`, variable = `requested_for` | Re-validates when Requested For changes |
 | `catalog_client_scripts/onsubmit_block_incomplete_trainings.js` | Catalog Client Script, type `onSubmit` | Blocks submit if trainings are incomplete |
+
+The three `onload`/`onchange_*` scripts each carry their own copy of the same
+small helper functions (`parseBusinessRoles`, `formatRequiredTrainingsByRole`,
+`runBusinessRoleTrainingValidation`) instead of sharing them through a UI
+Script. Catalog client scripts can run with "Isolate script" on, and
+Service Portal/Employee Center don't reliably guarantee a separate global
+UI Script loads before the catalog form does — depending on one caused a
+`ReferenceError` in testing. Keeping each script self-contained avoids that
+entirely. If you change the matching logic, update all three copies.
 
 ## Required catalog variables
 
@@ -69,15 +77,12 @@ differences.
 1. Create the Script Include `RoleTrainingValidatorAjax` (System Definition
    > Script Includes), client callable = true, paste in
    `script_includes/RoleTrainingValidatorAjax.js`.
-2. Create the UI Script `RoleTrainingValidation` (System UI > UI Scripts),
-   Global = true, Client callable = false, paste in
-   `ui_scripts/RoleTrainingValidation.js`.
-3. Add the catalog variables listed above to the catalog item/record
+2. Add the catalog variables listed above to the catalog item/record
    producer.
-4. Create the four Catalog Client Scripts listed in the table above against
-   that catalog item, matching type/variable/UI Type, with "Isolate script"
-   unchecked so they can call the global `RoleTrainingValidation` UI Script.
-5. Test: add a row with a business role that has required trainings, confirm
+3. Create the four Catalog Client Scripts listed in the table above against
+   that catalog item, matching type/variable/UI Type shown in each file's
+   header comment.
+4. Test: add a row with a business role that has required trainings, confirm
    `required_trainings` populates grouped by role, confirm Submit is blocked
    with an inline error until `u_nvlearn_sap_trainning_data` has matching
    `Complete` rows for the Requested For (or logged in) user.
