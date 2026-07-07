@@ -1,0 +1,30 @@
+<!--
+  NVIDIA Help — Email Header partial
+  Save as a ServiceNow Email Template (Notification > Email > Templates),
+  e.g. named "nvidia_help_header", then embed in a notification body with:
+    ${template:nvidia_help_header}
+
+  Replace {{LOGO_URL}} with the hosted NVIDIA logo image URL for your
+  instance (a db_image attachment or CDN link — do not use a data: URI,
+  Outlook strips them).
+-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#F5F5F5;">
+  <tr>
+    <td style="padding:20px 24px;">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="padding-right:12px;">
+            <img src="{{LOGO_URL}}" alt="NVIDIA" width="28" height="28" style="display:block; border:0;" />
+          </td>
+          <td style="padding-right:12px; border-right:1px solid #DADDE2; width:1px;">&nbsp;</td>
+          <td style="padding-left:12px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#000000;">
+            NVIDIA Help
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td style="background-color:#76B900; height:4px; line-height:4px; font-size:0;">&nbsp;</td>
+  </tr>
+</table>

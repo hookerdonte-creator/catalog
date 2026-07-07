@@ -1,0 +1,177 @@
+<!--
+  NVIDIA Help — Notification starter template
+  Copy this file (or paste into a ServiceNow Notification's HTML body) and
+  fill in the {{PLACEHOLDER}} values. Delete any block you don't need —
+  see the comments inline. See ../../README.md for the full design system
+  reference and usage rules.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{EMAIL_SUBJECT}}</title>
+</head>
+<body style="margin:0; padding:0; background-color:#EDEDED;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#EDEDED;">
+  <tr>
+    <td align="center" style="padding:24px 12px;">
+
+      <!-- 600px card -->
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px; background-color:#FFFFFF; border:1px solid #DADDE2; border-radius:4px; overflow:hidden;">
+
+        <!-- ============ HEADER ============ -->
+        <!-- Replace {{LOGO_URL}} with your hosted NVIDIA logo asset URL. -->
+        <tr>
+          <td>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#F5F5F5;">
+              <tr>
+                <td style="padding:20px 24px;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td style="padding-right:12px;">
+                        <img src="{{LOGO_URL}}" alt="NVIDIA" width="28" height="28" style="display:block; border:0;" />
+                      </td>
+                      <td style="padding-right:12px; border-right:1px solid #DADDE2; width:1px;">&nbsp;</td>
+                      <td style="padding-left:12px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#000000;">
+                        NVIDIA Help
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style="background-color:#76B900; height:4px; line-height:4px; font-size:0;">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- ============ BODY ============ -->
+        <tr>
+          <td style="padding:24px;">
+
+            <!-- Notification type label — ACTION REQUIRED / ALERT variants only.
+                 Delete this whole <table> block for Status Update notifications. -->
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:16px;">
+              <tr>
+                <td style="font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; letter-spacing:0.5px; color:#7B7B7B; text-transform:uppercase;">
+                  &#9888; {{ACTION REQUIRED | ALERT}}
+                </td>
+              </tr>
+            </table>
+
+            <!-- Email heading -->
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;">
+              <tr>
+                <td style="font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:24px; font-weight:bold; color:#000000;">
+                  {{EMAIL_HEADING}}
+                </td>
+              </tr>
+            </table>
+
+            <!-- Address client -->
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;">
+              <tr>
+                <td style="font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#000000;">
+                  Hello {{RECIPIENT_FIRST_NAME}},
+                </td>
+              </tr>
+            </table>
+
+            <!-- Email content — use a bold green underlined link for key
+                 reference text (e.g. a RITM/INC number). -->
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;">
+              <tr>
+                <td style="font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#000000; line-height:1.5;">
+                  {{BODY_COPY_WITH}} <a href="{{RECORD_URL}}" style="color:#76B900; font-weight:bold; text-decoration:underline;">{{RECORD_NUMBER}}</a> {{REST_OF_BODY_COPY}}
+                </td>
+              </tr>
+            </table>
+
+            <!-- 2-column tabular content — one row per record field.
+                 Label in the left column, value in the right. Delete this
+                 whole <table> block if there's no record data to show. -->
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;">
+              <tr>
+                <td style="padding-bottom:8px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#4B4B4B; width:180px; vertical-align:top;">{{FIELD_LABEL_1}}</td>
+                <td style="padding-bottom:8px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#000000; vertical-align:top;">{{FIELD_VALUE_1}}</td>
+              </tr>
+              <tr>
+                <td style="padding-bottom:8px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#4B4B4B; width:180px; vertical-align:top;">{{FIELD_LABEL_2}}</td>
+                <td style="padding-bottom:8px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#000000; vertical-align:top;">{{FIELD_VALUE_2}}</td>
+              </tr>
+              <!-- add / remove <tr> rows as needed -->
+            </table>
+
+            <!-- CTAs — primary + secondary pair for reply-by-email actions
+                 (Accept/Reject, Confirm Receipt/Report an Issue). For an
+                 action that sends the user back to the ServiceNow platform,
+                 delete this table and use a single tertiary link instead:
+                 <a href="{{PLATFORM_URL}}" style="font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; color:#76B900; text-decoration:underline;">{{LINK_TEXT}}</a>
+                 Delete both if the notification has no action. -->
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td style="padding-right:12px;">
+                  <a href="{{PRIMARY_ACTION_URL}}" style="display:inline-block; padding:12px 28px; background-color:#76B900; border-radius:4px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; color:#FFFFFF; text-decoration:none;">{{PRIMARY_LABEL}}</a>
+                </td>
+                <td>
+                  <a href="{{SECONDARY_ACTION_URL}}" style="display:inline-block; padding:11px 27px; background-color:#FFFFFF; border:1px solid #76B900; border-radius:4px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; color:#76B900; text-decoration:none;">{{SECONDARY_LABEL}}</a>
+                </td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+
+        <!-- ============ FOOTER ============ -->
+        <!-- Use the "with CTAs" footer ONLY for Status Update notifications.
+             This starter defaults to the "no CTAs" footer (Action Required /
+             Alert). Swap in the block below for Status Update instead:
+
+        <tr>
+          <td>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#F5F5F5; border-top:1px solid #E0E0E0;">
+              <tr>
+                <td align="center" style="padding:20px 24px 12px 24px;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td style="padding:0 6px;">
+                        <a href="{{MANAGE_PREFERENCES_URL}}" style="display:inline-block; padding:6px 16px; border:1px solid #76B900; border-radius:999px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#76B900; text-decoration:none;">Manage Preferences</a>
+                      </td>
+                      <td style="padding:0 6px;">
+                        <a href="{{UNSUBSCRIBE_URL}}" style="display:inline-block; padding:6px 16px; border:1px solid #DADDE2; border-radius:999px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#4B4B4B; text-decoration:none;">Unsubscribe</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="padding:0 24px 20px 24px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#4B4B4B;">
+                  You're receiving this due to recent activity in NVIDIA Help.
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        -->
+        <tr>
+          <td>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#F5F5F5; border-top:1px solid #E0E0E0;">
+              <tr>
+                <td align="center" style="padding:20px 24px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#4B4B4B;">
+                  You're receiving this due to recent activity in NVIDIA Help.
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+      </table>
+      <!-- /600px card -->
+
+    </td>
+  </tr>
+</table>
+</body>
+</html>

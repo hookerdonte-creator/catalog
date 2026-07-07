@@ -1,0 +1,134 @@
+<!--
+  Example: Action Required notification (matches the style guide's
+  "Email Template Anatomy" mockup — approval request with Accept/Reject).
+  Footer uses the no-CTAs variant (no unsubscribe on Action Required mail).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Approval requested for SAP account access</title>
+</head>
+<body style="margin:0; padding:0; background-color:#EDEDED;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#EDEDED;">
+  <tr>
+    <td align="center" style="padding:24px 12px;">
+
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px; background-color:#FFFFFF; border:1px solid #DADDE2; border-radius:4px; overflow:hidden;">
+
+        <!-- Header -->
+        <tr>
+          <td>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#F5F5F5;">
+              <tr>
+                <td style="padding:20px 24px;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td style="padding-right:12px;">
+                        <img src="{{LOGO_URL}}" alt="NVIDIA" width="28" height="28" style="display:block; border:0;" />
+                      </td>
+                      <td style="padding-right:12px; border-right:1px solid #DADDE2; width:1px;">&nbsp;</td>
+                      <td style="padding-left:12px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#000000;">
+                        NVIDIA Help
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style="background-color:#76B900; height:4px; line-height:4px; font-size:0;">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Body -->
+        <tr>
+          <td style="padding:24px;">
+
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:16px;">
+              <tr>
+                <td style="font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; letter-spacing:0.5px; color:#7B7B7B; text-transform:uppercase;">
+                  &#9888; Action Required
+                </td>
+              </tr>
+            </table>
+
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;">
+              <tr>
+                <td style="font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:24px; font-weight:bold; color:#000000;">
+                  Approval requested for SAP account access
+                </td>
+              </tr>
+            </table>
+
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;">
+              <tr>
+                <td style="font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#000000;">
+                  Hello Sirish,
+                </td>
+              </tr>
+            </table>
+
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;">
+              <tr>
+                <td style="font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#000000; line-height:1.5;">
+                  Please review the request <a href="{{RECORD_URL}}" style="color:#76B900; font-weight:bold; text-decoration:underline;">RITM12345678</a> "Onboarding SAP Account" for Sam Smith and select the appropriate action below to provide a reply.
+                </td>
+              </tr>
+            </table>
+
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;">
+              <tr>
+                <td style="padding-bottom:8px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#4B4B4B; width:180px; vertical-align:top;">Request opened on</td>
+                <td style="padding-bottom:8px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#000000; vertical-align:top;">06/09/2026 15:48:03 PDT</td>
+              </tr>
+              <tr>
+                <td style="padding-bottom:8px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#4B4B4B; width:180px; vertical-align:top;">Watch List</td>
+                <td style="padding-bottom:8px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#000000; vertical-align:top;">John Jacob</td>
+              </tr>
+              <tr>
+                <td style="padding-bottom:8px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#4B4B4B; width:180px; vertical-align:top;">Needs SAP Access?</td>
+                <td style="padding-bottom:8px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#000000; vertical-align:top;">Yes</td>
+              </tr>
+              <tr>
+                <td style="padding-bottom:8px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#4B4B4B; width:180px; vertical-align:top;">Provide Reference User</td>
+                <td style="padding-bottom:8px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#000000; vertical-align:top;">Jamie Jones</td>
+              </tr>
+            </table>
+
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td style="padding-right:12px;">
+                  <a href="{{ACCEPT_URL}}" style="display:inline-block; padding:12px 28px; background-color:#76B900; border-radius:4px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; color:#FFFFFF; text-decoration:none;">Accept</a>
+                </td>
+                <td>
+                  <a href="{{REJECT_URL}}" style="display:inline-block; padding:11px 27px; background-color:#FFFFFF; border:1px solid #76B900; border-radius:4px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; color:#76B900; text-decoration:none;">Reject</a>
+                </td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+
+        <!-- Footer (no CTAs) -->
+        <tr>
+          <td>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#F5F5F5; border-top:1px solid #E0E0E0;">
+              <tr>
+                <td align="center" style="padding:20px 24px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#4B4B4B;">
+                  You're receiving this due to recent activity in NVIDIA Help.
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+      </table>
+
+    </td>
+  </tr>
+</table>
+</body>
+</html>

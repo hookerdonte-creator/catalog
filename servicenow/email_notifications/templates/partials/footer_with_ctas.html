@@ -1,0 +1,27 @@
+<!--
+  NVIDIA Help — Footer partial (with CTAs)
+  Use on Status Update notifications only — gives the user an opt-out path.
+  Save as a ServiceNow Email Template, e.g. named "nvidia_help_footer_with_ctas",
+  then embed with: ${template:nvidia_help_footer_with_ctas}
+-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#F5F5F5; border-top:1px solid #E0E0E0;">
+  <tr>
+    <td align="center" style="padding:20px 24px 12px 24px;">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="padding:0 6px;">
+            <a href="{{MANAGE_PREFERENCES_URL}}" style="display:inline-block; padding:6px 16px; border:1px solid #76B900; border-radius:999px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#76B900; text-decoration:none;">Manage Preferences</a>
+          </td>
+          <td style="padding:0 6px;">
+            <a href="{{UNSUBSCRIBE_URL}}" style="display:inline-block; padding:6px 16px; border:1px solid #DADDE2; border-radius:999px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#4B4B4B; text-decoration:none;">Unsubscribe</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="padding:0 24px 20px 24px; font-family:'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#4B4B4B;">
+      You're receiving this due to recent activity in NVIDIA Help.
+    </td>
+  </tr>
+</table>
