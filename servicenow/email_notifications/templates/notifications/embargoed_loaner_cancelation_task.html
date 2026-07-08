@@ -1,0 +1,23 @@
+<!--
+  Notification: Embargoed loaner cancelation task
+  Body-only content (no header/footer) — expected to sit inside a
+  notification that embeds the shared header/footer partials, e.g.:
+    ${template:nvidia_help_header}
+    ... this content ...
+    ${template:nvidia_help_footer_no_ctas}
+-->
+<!-- Email Heading -->
+
+<h1 style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold; color: #000000; line-height: 1.3;">Loaner asset request cancelled</h1>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Hello ${requested_for.first_name},</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Please note that the loaner asset request ${mail_script:add_link_to_loaner_asset_order_reclam} has been cancelled. This request was linked to the Embargoed/Sensitive Country Travel ticket ${mail_script:add_link_to_sc_req_item} for the upcoming trip to ${location.country} starting on ${start_date}.</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">The <a href="https://nvidia.sharepoint.com/sites/nvinfo/policies/Documents/TravelAndCompanyAssetsSecurityPolicy.pdf?CID=ed67cdce-a8ff-43a8-9c31-62a6c89a84b6" style="color: #76B900; font-weight: bold; text-decoration: underline;">Travel and Company Assets Security policy</a> outlines restrictions on traveling with NVIDIA assets to Sensitive level countries of China, Hong Kong, and Macau.</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">According to the policy, travelers to China, Hong Kong, or Macau (for both business and personal travel) are required to use a loaner laptop if work is needed, regardless of business unit and risk level. Please do <strong>not</strong> take NVIDIA-issued devices into these countries.</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">If this cancellation was made in error, please leave a comment on ${mail_script:add_link_to_sc_req_item} and the appropriate team will assist.</p>
+
+<p style="margin: 0 0 0 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">For any questions regarding Sensitive country travel, please contact <a href="mailto:nvidia-deemedexport@nvidia.com" style="color: #76B900; font-weight: bold; text-decoration: underline;">Deemed Export</a>.</p>
