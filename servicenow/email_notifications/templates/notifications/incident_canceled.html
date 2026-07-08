@@ -1,0 +1,22 @@
+<!--
+  Notification: Incident Canceled
+  Body-only content (no header/footer) — expected to sit inside a
+  notification that embeds the shared header/footer partials, e.g.:
+    ${template:nvidia_help_header}
+    ... this content ...
+    ${template:nvidia_help_footer_no_ctas}
+  Status Update type — no badge, no CTAs, no unsubscribe footer.
+-->
+<!-- Email Heading -->
+<h1 style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold; color: #000000; line-height: 1.3;">Incident ${number} canceled</h1>
+
+<!-- Greeting -->
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Hello ${caller_id},</p>
+
+<!-- Intro sentence with styled INC number link -->
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">We have canceled ${number} with the following comment:</p>
+
+<!-- Comment label -->
+<p style="margin: 0 0 8px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; color: #000000; line-height: 1.5;">Comment:</p>
+<!-- Comment body — rendered by mail script -->
+<p style="margin: 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">${mail_script:it_single_comment_clean}</p>
