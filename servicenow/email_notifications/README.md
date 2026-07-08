@@ -5,6 +5,12 @@ HTML foundation for ServiceNow email notifications, built from the
 NVIDIA Sans design system, 600px email width). All markup is table-based
 with fully inlined styles so it survives Outlook/Gmail CSS stripping.
 
+> **See also:** [`NOTIFICATION_STANDARDS.md`](./NOTIFICATION_STANDARDS.md)
+> — the UAT/Grace-review governance doc (allowed vs. SME-only changes,
+> layout assignment, update-set process, UAT lint checklist). Where it
+> disagrees with the design tokens below, the standards doc wins — see its
+> "Reconciliation with README.md" section for the specific deltas.
+
 ## Files
 
 ```
