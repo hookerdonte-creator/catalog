@@ -1,0 +1,25 @@
+<!--
+  Notification: Delivered RITM notification Auto Help
+  Body-only content (no header/footer) — expected to sit inside a
+  notification that embeds the shared header/footer partials, e.g.:
+    ${template:nvidia_help_header}
+    ... this content ...
+    ${template:nvidia_help_footer_no_ctas}
+-->
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Hi ${requested_for},</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">I’m reaching out regarding ${number} - ${short_description}</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">${mail_script:incident_latest_comment_auto_help}</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Accept and close the ticket <strong>${mailto:mailto.successful}</strong></p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Reject and escalate to a human<strong> ${mailto:mailto.not_helpful}</strong></p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">If you take no action, we’ll follow up daily for 5 days before closing automatically.</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Thanks,</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">NVIDIA Help Assistant</p>
+
+<p style="margin: 0 0 0 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;"><em>This is an AI Generated response. Please review for accuracy.</em></p>

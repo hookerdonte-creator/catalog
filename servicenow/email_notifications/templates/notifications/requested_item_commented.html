@@ -1,0 +1,19 @@
+<!--
+  Notification: Requested Item Commented
+  Body-only content (no header/footer) — expected to sit inside a
+  notification that embeds the shared header/footer partials, e.g.:
+    ${template:nvidia_help_header}
+    ... this content ...
+    ${template:nvidia_help_footer_no_ctas}
+-->
+<!-- Email Heading -->
+
+<h1 style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold; color: #000000; line-height: 1.3;">A comment was added to ${cat_item.number}</h1>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Hello ${requested_for.first_name},</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">See comment details for <a href="${URI}" style="color: #76B900; font-weight: bold; text-decoration: underline;">${cat_item.number} </a> below.</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Comment:</p>
+
+<p style="margin: 0 0 0 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">${mail_script:it_single_comment_clean}</p>
