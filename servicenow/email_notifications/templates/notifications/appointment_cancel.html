@@ -1,0 +1,24 @@
+<!--
+  Notification: Appointment Cancel
+  Body-only content (no header/footer) — expected to sit inside a
+  notification that embeds the shared header/footer partials, e.g.:
+    ${template:nvidia_help_header}
+    ... this content ...
+    ${template:nvidia_help_footer_no_ctas}
+  Status Update type — no badge, no CTAs, no unsubscribe footer.
+  This row was empty in the earlier Remaining_notifications.xlsx batch;
+  this is the actual content.
+-->
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Hello,</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Your appointment for <strong>${subject}</strong> has been cancelled.</p>
+
+<!-- 2-column tabular content -->
+<table role="presentation" border="0" width="100%" cellspacing="0" cellpadding="0" style="margin: 0 0 24px 0;">
+<tr><td style="font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #4B4B4B; padding: 0 20px 8px 0; vertical-align: top; white-space: nowrap;">Appointment Start:</td><td style="font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; padding: 0 0 8px 0; vertical-align: top;">${mail_script:appointment.get_start}</td></tr>
+<tr><td style="font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #4B4B4B; padding: 0 20px 8px 0; vertical-align: top; white-space: nowrap;">Appointment End:</td><td style="font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; padding: 0 0 8px 0; vertical-align: top;">${mail_script:appointment.get_end}</td></tr>
+<tr><td style="font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #4B4B4B; padding: 0 20px 8px 0; vertical-align: top; white-space: nowrap;">Location:</td><td style="font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; padding: 0 0 8px 0; vertical-align: top;">${location}</td></tr>
+<tr><td style="font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #4B4B4B; padding: 0 20px 8px 0; vertical-align: top; white-space: nowrap;">Record ID:</td><td style="font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; padding: 0 0 8px 0; vertical-align: top;">${task.number}</td></tr>
+</table>
+
+<p style="margin: 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Thank you</p>
