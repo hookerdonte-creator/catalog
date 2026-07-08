@@ -1,0 +1,21 @@
+<!--
+  Notification: Sidebar Discussion Started
+  Body-only content (no header/footer) — expected to sit inside a
+  notification that embeds the shared header/footer partials, e.g.:
+    ${template:nvidia_help_header}
+    ... this content ...
+    ${template:nvidia_help_footer_no_ctas}
+-->
+<!-- Email Heading -->
+
+<h1 style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold; color: #000000; line-height: 1.3;">New message on Sidebar Discussion</h1>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Hi ${caller_id},</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">There are unread message(s) on ${mail_script:nvidia_uri_ref_styled}.</p>
+
+<!-- 2-column tabular content -->
+
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: 0 0 24px 0;" width="100%"><tr><td style="font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #4B4B4B; padding: 0 20px 8px 0; vertical-align: top; white-space: nowrap;">Short description</td><td style="font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; padding: 0 0 8px 0; vertical-align: top;">${short_description}</td></tr><tr><td style="font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #4B4B4B; padding: 0 20px 8px 0; vertical-align: top; white-space: nowrap;">Urgency</td><td style="font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; padding: 0 0 8px 0; vertical-align: top;">${urgency}</td></tr></table>
+
+<p style="margin: 0 0 0 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">${mail_script:open_sidebar_chat}</p>

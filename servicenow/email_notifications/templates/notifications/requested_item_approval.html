@@ -1,0 +1,55 @@
+<!--
+  Notification: Requested Item Approval
+  Body-only content (no header/footer) — expected to sit inside a
+  notification that embeds the shared header/footer partials, e.g.:
+    ${template:nvidia_help_header}
+    ... this content ...
+    ${template:nvidia_help_footer_no_ctas}
+-->
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Please review the request “${sysapproval.cat_item}” for ${sysapproval.request.requested_for}.</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">After your review, select the appropriate link below and reply.${mail_script:approval_instruction_text}</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Request opened on: ${sysapproval.request.opened_at}</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">${mail_script:ritm_summary}</p>
+
+<!-- CTA Buttons -->
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr><td style="padding-right: 12px;"><!--[if mso]>
+        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+                     xmlns:w="urn:schemas-microsoft-com:office:word"
+                     href="${mailto_url:mailto.approval}"
+                     style="height:46px;v-text-anchor:middle;width:180px;"
+                     arcsize="9%"
+                     strokecolor="#76b900"
+                     fillcolor="#76b900">
+          <w:anchorlock/>
+          <center style="color:#ffffff;
+                         font-family:Arial,Helvetica,sans-serif;
+                         font-size:16px;
+                         font-weight:700;">
+            Accept
+          </center>
+        </v:roundrect>
+        <![endif]--><!--[if !mso]><!--> <a style="display: inline-block; background-color: #76b900; color: #ffffff; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; text-decoration: none; padding: 12px 28px; border-radius: 4px; mso-hide: all;" href="${mailto_url:mailto.approval}">Accept</a> <!--<![endif]--></td><td><!--[if mso]>
+        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+                     xmlns:w="urn:schemas-microsoft-com:office:word"
+                     href="${mailto_url:mailto.rejection}"
+                     style="height:46px;v-text-anchor:middle;width:180px;"
+                     arcsize="9%"
+                     strokecolor="#76b900"
+                     fillcolor="#ffffff">
+          <w:anchorlock/>
+          <center style="color:#76b900;
+                         font-family:Arial,Helvetica,sans-serif;
+                         font-size:16px;
+                         font-weight:700;">
+            Reject
+          </center>
+        </v:roundrect>
+        <![endif]--><!--[if !mso]><!--> <a style="display: inline-block; background-color: #ffffff; color: #76b900; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; text-decoration: none; padding: 11px 27px; border-radius: 4px; border: 1px solid #76b900; mso-hide: all;" href="${mailto_url:mailto.rejection}">Reject</a> <!--<![endif]--></td></tr>
+</tbody>
+</table>
