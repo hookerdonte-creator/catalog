@@ -5,15 +5,20 @@
     ${template:nvidia_help_header}
     ... this content ...
     ${template:nvidia_help_footer_no_ctas}
+  Re-fixed per NOTIFICATION_STANDARDS.md (UAT/Grace review) — supersedes
+  the earlier README.md-based pass on this file. Also replaced the manual
+  <a href="${URI}"> record link with ${mail_script:nvidia_uri_ref_styled}
+  per the standards doc's RITM/INC link rule, and bolded the "Comment:"
+  label to match the comment-label convention used elsewhere.
 -->
 <!-- Email Heading -->
+<h1 style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: bold; color: #000000; line-height: 1.3;">A comment was added to ${cat_item.number}</h1>
 
-<h1 style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold; color: #000000; line-height: 1.3;">A comment was added to ${cat_item.number}</h1>
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #333333; line-height: 1.5;">Hello ${requested_for.first_name},</p>
 
-<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Hello ${requested_for.first_name},</p>
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #333333; line-height: 1.5;">See comment details for ${mail_script:nvidia_uri_ref_styled} below.</p>
 
-<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">See comment details for <a href="${URI}" style="color: #76B900; font-weight: bold; text-decoration: underline;">${cat_item.number} </a> below.</p>
-
-<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Comment:</p>
-
-<p style="margin: 0 0 0 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">${mail_script:it_single_comment_clean}</p>
+<!-- Comment label -->
+<p style="margin: 0 0 8px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; color: #000000; line-height: 1.5;">Comment:</p>
+<!-- Comment body — rendered by mail script -->
+<p style="margin: 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #333333; line-height: 1.5;">${mail_script:it_single_comment_clean}</p>

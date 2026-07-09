@@ -5,21 +5,26 @@
     ${template:nvidia_help_header}
     ... this content ...
     ${template:nvidia_help_footer_no_ctas}
+  Action Required type — Accept/Reject resolves by email reply, so per
+  the style guide this gets the primary+secondary CTA pair and the
+  no-CTAs footer.
+  Re-fixed per NOTIFICATION_STANDARDS.md (UAT/Grace review) — supersedes
+  the earlier README.md-based pass on this file.
 -->
 <!-- Email Heading -->
+<h1 style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: bold; color: #000000; line-height: 1.3;">Change request approval needed</h1>
 
-<h1 style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold; color: #000000; line-height: 1.3;">Change Request Approval Needed</h1>
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #333333; line-height: 1.5;">Hello ${approver.name},</p>
 
-<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Hello ${approver.name},</p>
-
-<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Please review the change ${mail_script:nvidia_change_record_link} by ${sysapproval.opened_by.name}. After your review, select the appropriate link below and reply.</p>
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #333333; line-height: 1.5;">Please review the change ${mail_script:nvidia_change_record_link} by ${sysapproval.opened_by.name}. After your review, select the appropriate link below and reply.</p>
 
 <!-- 2-column tabular content -->
-
-<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: 0 0 24px 0;" width="100%"><tr><td style="font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #4B4B4B; padding: 0 20px 8px 0; vertical-align: top; white-space: nowrap;">Short Description:</td><td style="font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; padding: 0 0 8px 0; vertical-align: top;">${sysapproval.short_description}</td></tr><tr><td style="font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #4B4B4B; padding: 0 20px 8px 0; vertical-align: top; white-space: nowrap;">Justification:</td><td style="font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; color: #000000; padding: 0 0 8px 0; vertical-align: top;">${sysapproval.justification}</td></tr></table>
+<table role="presentation" border="0" width="100%" cellspacing="0" cellpadding="0" style="margin: 0 0 24px 0;">
+<tr><td style="font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #666666; width: 17.2137%; padding: 0 20px 8px 0; vertical-align: top; white-space: nowrap;">Short Description:</td><td style="font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #333333; width: 82.7863%; padding: 0 0 8px 0; vertical-align: top;">${sysapproval.short_description}</td></tr>
+<tr><td style="font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #666666; width: 17.2137%; padding: 0 20px 8px 0; vertical-align: top; white-space: nowrap;">Justification:</td><td style="font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #333333; width: 82.7863%; padding: 0 0 8px 0; vertical-align: top;">${sysapproval.justification}</td></tr>
+</table>
 
 <!-- CTA Buttons -->
-
 <table border="0" cellspacing="0" cellpadding="0">
 <tbody>
 <tr><td style="padding-right: 12px;"><!--[if mso]>
@@ -27,7 +32,7 @@
                      xmlns:w="urn:schemas-microsoft-com:office:word"
                      href="${mailto_url:mailto.approval}"
                      style="height:46px;v-text-anchor:middle;width:180px;"
-                     arcsize="9%"
+                     arcsize="8%"
                      strokecolor="#76b900"
                      fillcolor="#76b900">
           <w:anchorlock/>
@@ -38,12 +43,12 @@
             Accept
           </center>
         </v:roundrect>
-        <![endif]--><!--[if !mso]><!--> <a style="display: inline-block; background-color: #76b900; color: #ffffff; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; text-decoration: none; padding: 12px 28px; border-radius: 4px; mso-hide: all;" href="${mailto_url:mailto.approval}"><span style="color: #ffffff;">Accept</span></a> <!--<![endif]--></td><td><!--[if mso]>
+        <![endif]--><!--[if !mso]><!--> <a style="display: inline-block; background-color: #76b900; color: #ffffff; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; text-decoration: none; padding: 12px 28px; border-radius: 6px; mso-hide: all;" href="${mailto_url:mailto.approval}"><span style="color: #ffffff;">Accept</span></a> <!--<![endif]--></td><td><!--[if mso]>
         <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
                      xmlns:w="urn:schemas-microsoft-com:office:word"
                      href="${mailto_url:mailto.rejection}"
                      style="height:46px;v-text-anchor:middle;width:180px;"
-                     arcsize="9%"
+                     arcsize="8%"
                      strokecolor="#76b900"
                      fillcolor="#ffffff">
           <w:anchorlock/>
@@ -54,6 +59,6 @@
             Reject
           </center>
         </v:roundrect>
-        <![endif]--><!--[if !mso]><!--> <a style="display: inline-block; background-color: #ffffff; color: #76b900; font-family: 'NVIDIA Sans', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; text-decoration: none; padding: 11px 27px; border-radius: 4px; border: 1px solid #76b900; mso-hide: all;" href="${mailto_url:mailto.rejection}"><span style="color: #76b900;">Reject</span></a> <!--<![endif]--></td></tr>
+        <![endif]--><!--[if !mso]><!--> <a style="display: inline-block; background-color: #ffffff; color: #76b900; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; text-decoration: none; padding: 11px 27px; border-radius: 6px; border: 1px solid #76b900; mso-hide: all;" href="${mailto_url:mailto.rejection}"><span style="color: #76b900;">Reject</span></a> <!--<![endif]--></td></tr>
 </tbody>
 </table>
