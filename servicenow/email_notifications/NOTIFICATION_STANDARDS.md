@@ -103,7 +103,8 @@ Rules:
 
 - Replace bordered tables with borderless 2-column layout
 - Label column: `17.2137%`, muted gray, not bold
-- Value column: `82.7863%`, dark text `#333333`
+- Value column: `82.7863%`, dark text `#000000` (always — do not use `#333333`
+  here even though general body copy elsewhere does)
 - Remove empty label rows when field is blank (e.g. "Sensitive Loaner:")
 - Do not bold metadata like "Request opened on"
 - **Exception:** `DuplicateOnboardingRITMs` keeps the bordered table per
@@ -199,7 +200,7 @@ notification files:
 |---|---|---|
 | Font stack | `'NVIDIA Sans', Arial, Helvetica, sans-serif` | `'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif` |
 | Footer color | `#4B4B4B` (text-secondary) | `#666666` |
-| Table value column color | `#000000` (text-primary) | `#333333` |
+| Table value column color | `#000000` (text-primary) | `#000000` — reconciled: table value text is always `#000000`, per explicit instruction, overriding the `#333333` this doc originally specified |
 | Table label/value column width | auto width + `white-space:nowrap` | fixed `17.2137%` / `82.7863%` |
 | Secondary/hover green | `#3F8500` (dark-green) | `#5a8c00` |
 | CTA border-radius / VML arcsize | `4px` / `9%` | `6px` / `8%` |
