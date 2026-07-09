@@ -1,0 +1,24 @@
+<!--
+  Notification: Incident resolved
+  Body-only content (no header/footer) — expected to sit inside a
+  notification that embeds the shared header/footer partials, e.g.:
+    ${template:nvidia_help_header}
+    ... this content ...
+    ${template:nvidia_help_footer_no_ctas}
+  Fixed per NOTIFICATION_STANDARDS.md (UAT/Grace review).
+-->
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Your request was successfully resolved</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">${mail_script:horizontal_line}</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">${mail_script:incident_body}</p>
+
+<!-- Tertiary CTA — link back to the ServiceNow platform -->
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; color: #76b900; line-height: 1.5;">${mail_script:incident_link}</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">${mail_script:incident_details}</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Thank you,</p>
+
+<p style="margin: 0 0 0 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Service Desk Team</p>

@@ -1,0 +1,20 @@
+<!--
+  Notification: Awaiting Third Party
+  Body-only content (no header/footer) — expected to sit inside a
+  notification that embeds the shared header/footer partials, e.g.:
+    ${template:nvidia_help_header}
+    ... this content ...
+    ${template:nvidia_help_footer_no_ctas}
+  Fixed per NOTIFICATION_STANDARDS.md (UAT/Grace review).
+-->
+<!-- Email Heading -->
+
+<h1 style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: bold; color: #000000; line-height: 1.3;">${number} referred to a vendor or third party</h1>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Hello ${caller_id.first_name},</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Your incident ${mail_script:link_to_portal_nvidia} has been referred to a vendor or other third party for assistance. </p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Comment:</p>
+
+<p style="margin: 0 0 0 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">${mail_script:it_single_comment_clean}</p>

@@ -1,0 +1,37 @@
+<!--
+  Notification: Rejected Loaner Exemption for Sensitive
+  Body-only content (no header/footer) — expected to sit inside a
+  notification that embeds the shared header/footer partials, e.g.:
+    ${template:nvidia_help_header}
+    ... this content ...
+    ${template:nvidia_help_footer_no_ctas}
+  Fixed per NOTIFICATION_STANDARDS.md (UAT/Grace review).
+-->
+<!-- Email Heading -->
+
+<h1 style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: bold; color: #000000; line-height: 1.3;">Loaner Exemption Rejected</h1>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Hello ${requested_for},</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Your request for a loaner exemption has been rejected by the EngSec team.</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">You cannot travel to ${current.variables.destination} with your NVIDIA issued laptop or non-NVIDIA issued (personal) laptop with NVIDIA data. Additionally, a Loaner Asset Order ticket will automatically be created on your behalf.</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">You can edit your travel dates or cancel your travel ticket up to 9 days before the last submitted travel date. If your plans change within the 9-day cut-off period, please leave a comment on the ${mail_script:link_to_portal} within NVIDIA Help, and IT will assist with updating the dates or canceling the ticket on your behalf.</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">You will automatically be added to the EC-Restricted-China-Travel DL starting from the travel start date you submitted. Upon your return, you can request for reinstatement of your access through the linked ${mail_script:nvidia_ritm_number_link} above and follow the instructions below in NVIDIA Help.</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Return from Travel Access Reinstatement Instructions:</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Upon your return, submit a reinstatement request through your existing travel ticket in NVIDIA Help to be removed from the restrictions.</p>
+
+<ul style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">
+<li style="margin: 0 0 4px 0; padding: 0;">Log into your NVIDIA Help account</li>
+<li style="margin: 0 0 4px 0; padding: 0;">Navigate to My Requests</li>
+<li style="margin: 0 0 4px 0; padding: 0;">Find your travel ticket</li>
+<li style="margin: 0 0 4px 0; padding: 0;">Click on Actions</li>
+<li style="margin: 0 0 4px 0; padding: 0;">Click on Reinstate Access</li>
+<li style="margin: 0; padding: 0;">Submit the Reinstatement Attestation</li>
+</ul>
+
+<p style="margin: 0 0 0 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">For any questions, please contact the EngSec team at <a href="mailto:Eng-InfoSec-Support@exchange.nvidia.com" rel="noopener" style="color: #76b900; font-weight: bold; text-decoration: underline;" target="_blank">Eng-InfoSec-Support@exchange.nvidia.com</a>.</p>

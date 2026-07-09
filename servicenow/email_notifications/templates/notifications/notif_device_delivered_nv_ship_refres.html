@@ -1,0 +1,44 @@
+<!--
+  Notification: Notif Device Delivered - NV ship. refres
+  Body-only content (no header/footer) — expected to sit inside a
+  notification that embeds the shared header/footer partials, e.g.:
+    ${template:nvidia_help_header}
+    ... this content ...
+    ${template:nvidia_help_footer_no_ctas}
+  Fixed per NOTIFICATION_STANDARDS.md (UAT/Grace review).
+-->
+<!-- Email Heading -->
+
+<h1 style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: bold; color: #000000; line-height: 1.3;">Your new computer has been delivered</h1>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Hello ${requested_for},</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Our records shows that your new computer has been delivered. If that’s not the case or you are having issues with new computer or setup, please open an ${mail_script:link_to_esc_incident_form_incident_with_it_text}.</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; color: #000000; line-height: 1.5;">Products being shipped to you</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">${mail_script:shipment_details_nv_fulfillment}</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; color: #000000; line-height: 1.5;">Old Equipment return instructions</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Please use the return label included with your new computer shipment.</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">You can either choose to ship back your old computer or return it in person at any of our tech lounges.</p>
+
+<p style="margin: 0 0 8px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; color: #000000; line-height: 1.5;">To Ship back your old computer:</p>
+
+<ul style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">
+<li style="margin: 0; padding: 0;">You can take your old equipment and your new asset box to any FedEx office nearby. They will help you with the packaging. All you need to do is show them the return label.</li>
+</ul>
+
+<p style="margin: 0 0 8px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; color: #000000; line-height: 1.5;">To Return back your old computer in person:</p>
+
+<ul style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">
+<li style="margin: 0; padding: 0;">Stop by any tech lounge and hand over your old computer to an IT tech. You're done!</li>
+</ul>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">If you have any question, please reach out to us via ${mail_script:link_to_esc_incident_form_nvidia_help_text}.</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Best Regards,</p>
+
+<p style="margin: 0 0 0 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">NVIDIA IT</p>

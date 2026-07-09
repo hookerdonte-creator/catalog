@@ -1,0 +1,16 @@
+<!--
+  Notification: China User VPN access reminder
+  Body-only content (no header/footer) — expected to sit inside a
+  notification that embeds the shared header/footer partials, e.g.:
+    ${template:nvidia_help_header}
+    ... this content ...
+    ${template:nvidia_help_footer_no_ctas}
+  Fixed per NOTIFICATION_STANDARDS.md (UAT/Grace review).
+-->
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Hello ${requested_for},</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">${mail_script:AddWatchListToCC} ${mail_script:china_travel_vpm_reminder}</p>
+
+<p style="margin: 0 0 24px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Best regards,</p>
+
+<p style="margin: 0 0 0 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">NVIDIA IT</p>

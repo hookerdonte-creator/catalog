@@ -1,0 +1,16 @@
+<!--
+  Notification: Loaner asset order commented
+  Body-only content (no header/footer) — expected to sit inside a
+  notification that embeds the shared header/footer partials, e.g.:
+    ${template:nvidia_help_header}
+    ... this content ...
+    ${template:nvidia_help_footer_no_ctas}
+  Fixed per NOTIFICATION_STANDARDS.md (UAT/Grace review).
+-->
+<p style="margin: 0 0 8px 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; color: #000000; line-height: 1.5;">Loaner request details:</p>
+
+<!-- 2-column tabular content -->
+
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: 0 0 24px 0;" width="100%"><tr><td style="font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; padding: 0 20px 8px 0; vertical-align: top; white-space: nowrap;">Loaner Type:</td><td style="font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; padding: 0 0 8px 0; vertical-align: top;"> ${u_loaner_type}</td></tr><tr><td style="font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; padding: 0 20px 8px 0; vertical-align: top; white-space: nowrap;">Model and OS:</td><td style="font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; padding: 0 0 8px 0; vertical-align: top;"> ${asset.model} - ${u_os_needed}</td></tr><tr><td style="font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; padding: 0 20px 8px 0; vertical-align: top; white-space: nowrap;">Start Date:</td><td style="font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; padding: 0 0 8px 0; vertical-align: top;"> ${start_date}</td></tr><tr><td style="font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; padding: 0 20px 8px 0; vertical-align: top; white-space: nowrap;">Return Date:</td><td style="font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; padding: 0 0 8px 0; vertical-align: top;"> ${return_date}</td></tr><tr><td style="font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; padding: 0 20px 8px 0; vertical-align: top; white-space: nowrap;">Destination:</td><td style="font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; padding: 0 0 8px 0; vertical-align: top;"> ${location}</td></tr></table>
+
+<p style="margin: 0 0 0 0; font-family: 'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #000000; line-height: 1.5;">Comments: <span data-teams="true">${mail_script:it_single_comment}</span> </p>
