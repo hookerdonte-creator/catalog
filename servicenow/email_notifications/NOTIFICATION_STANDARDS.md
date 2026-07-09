@@ -95,7 +95,11 @@ Rules:
 ### Links & brand color
 
 - Primary green: `#76b900` | darker green: `#5a8c00`
-- All record/content links: green, bold, underlined — never default blue
+- All record/content links: green, bold, **underlined** — never default blue
+- Underline applies to inline text hyperlinks only. CTA buttons
+  (Accept/Reject, Manage Preferences/Unsubscribe) render as buttons and
+  correctly keep `text-decoration: none` — underlining a button label
+  would look wrong
 - RITM/INC numbers: use `${mail_script:nvidia_uri_ref_styled}` — not
   `${URI}` / `${URI_REF}`
 - HR onboarding links: add underlines
