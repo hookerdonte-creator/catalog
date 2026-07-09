@@ -81,6 +81,13 @@ Rules:
 - Standard padding: `24px 32px` | Action Required: `16px 24px`
 - Remove thin divider lines after "Comments" / "Additional Comments"
 - Fix excessive gap between "Action Required" eyebrow and approval text
+- A label or intro sentence immediately preceding a `<ul>`/`<ol>` gets the
+  same tight 8px margin-bottom as a label immediately preceding a table —
+  applies whether it's a short bold section label ("Instructions for
+  Access Reinstatement:") or a full sentence ending in a colon ("If you
+  are still having access issues after 2 hours:"). List items themselves
+  use 8px spacing between `<li>`s, with `padding-left: 22px` for the list
+  indent (not a `margin-left` hack).
 
 ### Links & brand color
 
