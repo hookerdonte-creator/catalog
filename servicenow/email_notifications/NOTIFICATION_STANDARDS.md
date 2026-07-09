@@ -63,7 +63,10 @@ Rules:
   on all inline-styled elements
 - Title/heading: 24px (fix 22px / 20px drift)
 - Body text: 16px (fix 14px / 13px drift)
-- Footer: 12px, color `#666666`
+- Body/label text color: always `#000000` — do not use `#333333` or
+  `#666666` for any non-link text (headings, greetings, paragraphs,
+  section labels, table label column, footer)
+- Footer: 12px, color `#000000`
 - Keep font size consistent across body, links, closing text, and survey
   blocks
 - Section labels: same size as body, bold only — not all-caps, not green
@@ -102,9 +105,8 @@ Rules:
 ### Record data layout
 
 - Replace bordered tables with borderless 2-column layout
-- Label column: `17.2137%`, muted gray, not bold
-- Value column: `82.7863%`, dark text `#000000` (always — do not use `#333333`
-  here even though general body copy elsewhere does)
+- Label column: `17.2137%`, `#000000`, not bold
+- Value column: `82.7863%`, `#000000`, not bold
 - Remove empty label rows when field is blank (e.g. "Sensitive Loaner:")
 - Do not bold metadata like "Request opened on"
 - **Exception:** `DuplicateOnboardingRITMs` keeps the bordered table per
@@ -199,8 +201,9 @@ notification files:
 | Item | README.md (PDF-derived) | This doc (UAT/Grace) |
 |---|---|---|
 | Font stack | `'NVIDIA Sans', Arial, Helvetica, sans-serif` | `'NVIDIA Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif` |
-| Footer color | `#4B4B4B` (text-secondary) | `#666666` |
-| Table value column color | `#000000` (text-primary) | `#000000` — reconciled: table value text is always `#000000`, per explicit instruction, overriding the `#333333` this doc originally specified |
+| Footer color | `#4B4B4B` (text-secondary) | `#000000` — reconciled: no non-link text uses `#666666`/`#333333` anywhere, per explicit instruction |
+| Table label column color | `#4B4B4B` (text-secondary) | `#000000` — reconciled, same instruction |
+| Table value column color | `#000000` (text-primary) | `#000000` — matches, no change needed |
 | Table label/value column width | auto width + `white-space:nowrap` | fixed `17.2137%` / `82.7863%` |
 | Secondary/hover green | `#3F8500` (dark-green) | `#5a8c00` |
 | CTA border-radius / VML arcsize | `4px` / `9%` | `6px` / `8%` |
