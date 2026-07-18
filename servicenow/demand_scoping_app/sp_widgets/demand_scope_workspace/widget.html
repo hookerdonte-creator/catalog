@@ -1,0 +1,113 @@
+<!--
+  Service Portal Widget HTML Template: "Demand Scope Workspace"
+  Widget id: demand_scope_workspace
+-->
+<div class="panel panel-default demand-scope-workspace">
+
+  <div class="panel-body" ng-if="data.error">
+    <div class="alert alert-warning" role="alert">{{data.error}}</div>
+  </div>
+
+  <div class="panel-body" ng-if="!data.error">
+    <div class="scope-header">
+      <h3>{{data.demand.number}} &mdash; {{data.demand.short_description}}</h3>
+    </div>
+
+    <!-- WIZARD -->
+    <div ng-if="data.mode == 'wizard'" class="scope-wizard">
+
+      <div class="form-group criteria-block" ng-repeat="criteria in data.criteria">
+        <label>
+          {{criteria.name}}
+          <span class="text-muted" ng-if="criteria.help_text">- {{criteria.help_text}}</span>
+        </label>
+        <p class="text-muted small" ng-if="criteria.description">{{criteria.description}}</p>
+
+        <div ng-if="criteria.question_type == 'single_choice'" class="btn-group-vertical scope-options" role="group">
+          <button type="button"
+                  ng-repeat="option in criteria.options"
+                  ng-class="c.isSelected(criteria.sys_id, option.sys_id) ? 'btn-primary' : 'btn-default'"
+                  class="btn"
+                  ng-click="c.setChoice(criteria.sys_id, option.sys_id)">
+            {{option.label}}
+          </button>
+        </div>
+
+        <div ng-if="criteria.question_type == 'boolean'">
+          <label class="checkbox-inline">
+            <input type="checkbox"
+                   ng-init="c.ensureResponse(criteria.sys_id)"
+                   ng-model="c.responses[criteria.sys_id].numeric_value"> Yes
+          </label>
+        </div>
+
+        <div ng-if="criteria.question_type == 'scale' || criteria.question_type == 'numeric'">
+          <input type="number" class="form-control" min="0" ng-attr-max="{{criteria.max_points}}"
+                 ng-init="c.ensureResponse(criteria.sys_id)"
+                 ng-model="c.responses[criteria.sys_id].numeric_value">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Target Start Date</label>
+        <input type="date" class="form-control" ng-model="c.startDate">
+      </div>
+
+      <div class="scope-preview">
+        <strong>Live estimate score:</strong> {{c.previewScore()}}
+        <span class="text-muted small">(final size is recalculated on submit)</span>
+      </div>
+
+      <button type="button" class="btn btn-primary" ng-disabled="!c.allAnswered() || c.loading" ng-click="c.submit()">
+        <span ng-if="c.loading"><i class="fa fa-spinner fa-spin"></i> Submitting...</span>
+        <span ng-if="!c.loading">Submit Scope</span>
+      </button>
+    </div>
+
+    <!-- SUMMARY / GANTT -->
+    <div ng-if="data.mode == 'summary'" class="scope-summary">
+      <div class="size-badge" ng-style="{'background-color': data.summary.size.color}">
+        {{data.summary.size.label}}
+      </div>
+
+      <table class="table table-condensed scope-meta">
+        <tr><td>Score</td><td>{{data.summary.total_score}}</td></tr>
+        <tr><td>Estimated Duration</td><td>{{data.summary.estimated_duration_weeks}} weeks</td></tr>
+        <tr><td>Start</td><td>{{data.summary.estimated_start_date}}</td></tr>
+        <tr><td>End</td><td>{{data.summary.estimated_end_date}}</td></tr>
+      </table>
+
+      <h4>High-Level Timeline</h4>
+      <div class="scope-gantt">
+        <div class="gantt-row" ng-repeat="phase in data.summary.phases">
+          <div class="gantt-label">{{phase.phase_name}}</div>
+          <div class="gantt-track">
+            <div class="gantt-bar" ng-style="c.ganttStyle(phase)">
+              <span class="gantt-bar-label">{{phase.start_date}} - {{phase.end_date}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h4>Resource Plan</h4>
+      <table class="table table-striped">
+        <thead>
+          <tr><th>Role</th><th>Phase</th><th>Allocation</th><th>FTE</th><th>Start</th><th>End</th></tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="resource in data.summary.resources">
+            <td>{{resource.role}}</td>
+            <td>{{resource.phase_name}}</td>
+            <td>{{resource.allocation_percent}}%</td>
+            <td>{{resource.fte_count}}</td>
+            <td>{{resource.start_date}}</td>
+            <td>{{resource.end_date}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button type="button" class="btn btn-default" ng-click="c.rescope()" ng-disabled="c.loading">Rescope</button>
+    </div>
+
+  </div>
+</div>

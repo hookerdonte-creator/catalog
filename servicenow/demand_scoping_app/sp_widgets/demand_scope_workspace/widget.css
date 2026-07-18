@@ -1,0 +1,77 @@
+/* Service Portal Widget CSS: "Demand Scope Workspace" */
+
+.demand-scope-workspace .scope-header h3 {
+  margin-top: 0;
+}
+
+.demand-scope-workspace .criteria-block {
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.demand-scope-workspace .scope-options .btn {
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.demand-scope-workspace .scope-preview {
+  margin: 16px 0;
+  font-size: 15px;
+}
+
+.demand-scope-workspace .size-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.demand-scope-workspace .scope-meta td:first-child {
+  font-weight: bold;
+  width: 180px;
+}
+
+.demand-scope-workspace .scope-gantt {
+  margin: 12px 0 24px;
+}
+
+.demand-scope-workspace .gantt-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.demand-scope-workspace .gantt-label {
+  width: 140px;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.demand-scope-workspace .gantt-track {
+  position: relative;
+  flex: 1;
+  height: 26px;
+  background: #f2f2f2;
+  border-radius: 3px;
+}
+
+.demand-scope-workspace .gantt-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 3px;
+  min-width: 2%;
+}
+
+.demand-scope-workspace .gantt-bar-label {
+  position: absolute;
+  left: 6px;
+  top: 3px;
+  font-size: 11px;
+  color: #fff;
+  white-space: nowrap;
+}

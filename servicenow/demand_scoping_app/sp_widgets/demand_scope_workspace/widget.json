@@ -1,0 +1,16 @@
+{
+  "id": "demand_scope_workspace",
+  "name": "Demand Scope Workspace",
+  "description": "Configurable demand/project scoping wizard: t-shirt sizing, resource plan and high-level Gantt.",
+  "option_schema": [
+    {
+      "name": "demand_sys_id",
+      "label": "Demand sys_id (optional override)",
+      "type": "string",
+      "hint": "Leave blank to read the demand from the sysparm_demand URL parameter (how the 'Scope This Demand' UI Action opens this page)."
+    }
+  ],
+  "data_table": null,
+  "css_included": true,
+  "public": false
+}
